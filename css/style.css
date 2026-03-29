@@ -27,9 +27,34 @@ body{
     height:90vh; /* ocupa a tela inteira */
     display:flex; /* ativa layout flex */
     flex-wrap:wrap;
-    align-items:center; /* centraliza vertical */
+    align-items:flex-start;
     justify-content:space-between; /* separa texto e imagem */
-    padding:0 8%; /* espaço lateral */
+    gap:2rem;
+    padding:0 4%; /* espaço lateral */
+}
+
+.hero .title{
+    flex:0 1 20%;
+    min-width:180px;
+    display:flex;
+    align-items:center;
+}
+
+.hero .text{
+    flex:1 1 35%;
+    min-width:260px;
+}
+
+.hero .images{
+    flex:1 1 35%;
+    min-width:260px;
+    max-width:560px;
+}
+
+.title{
+    position:static;
+    width:auto;
+    margin:0 0 1.5rem 0;
 }
 
 .title img{
@@ -86,10 +111,6 @@ body{
 
 body.index-page .aboutus,
 body.index-page .contact {
-    display:none !important;
-}
-
-body.index-page .images {
     display:none !important;
 }
 
@@ -343,6 +364,10 @@ button.btn{
         aspect-ratio:1/1;
     }
 
+    .index-page .images{
+        display:none !important;
+    }
+
     .site-header{
         display:flex;
         position:fixed;
@@ -391,10 +416,6 @@ button.btn{
         display:none;
     }
 
-    .index-page .images{
-        display:none !important;
-    }
-
     .tittle,
     .aboutus,
     .contact {
@@ -414,6 +435,10 @@ button.btn{
         width:100%;
         text-align:center;
         padding:12px;
+    }
+
+    .index-page .images{
+        display:none !important;
     }
 
     .heroprodutos {
