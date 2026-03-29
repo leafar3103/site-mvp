@@ -163,7 +163,6 @@ body{
     position:relative; /* necessário para overlay */
     width:100%;
     max-width:500px;
-    aspect-ratio:1/1;
     overflow:hidden;
     margin:auto;
 }
@@ -171,8 +170,8 @@ body{
 /* IMAGEM PRINCIPAL */
 .main-img{
     width:100%;
-    height:100%;
-    object-fit:cover;
+    height:auto;
+    object-fit:contain;
     display:block;
     filter:grayscale(100%) contrast(120%); /* estilo preto e branco */
     transition:0.5s;
@@ -185,7 +184,7 @@ body{
     left:0;
     width:100%;
     height:100%;
-    object-fit:cover;
+    object-fit:contain;
     opacity:0; /* invisível inicialmente */
     /* transform:translate(20px, 20px); deslocada */
     transition:0.5s;
@@ -404,8 +403,8 @@ nav a:hover {
 
 .card img {
     width: 100%;        /* ocupa toda largura do card */
-    height: 250px;      /* altura fixa (PADRÃO) */
-    object-fit: cover;  /* corta sem deformar */
+    height: auto;       /* altura automática para não cortar */
+    object-fit: contain;/* preserva a imagem inteira */
 }
 
 .card button {
