@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sobre Nós</title>
+    <link rel="stylesheet" href="css/style.css">
 
 <style>
 *{
@@ -61,14 +62,20 @@ body{
 
 
 </head>
-<body>
+<body class="sobre-page">
 
-     <header>
-        
-    
-        <nav>
-           <a class="home1" href="index.html">Home</a>
-
+     <header class="site-header">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav class="menu">
+           <a href="index.html">Home</a>
+           <a href="sobre.html">Sobre nós</a>
+           <a href="produtos.html">Produtos</a>
+           <a href="contato.html">Contato</a>
         </nav>
     </header>
 

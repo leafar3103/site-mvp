@@ -561,6 +561,20 @@ nav a:hover {
 }
 
 /* ================= FOOTER ================= */
+
+.sobre-page .menu {
+    background: rgba(255,255,255,0.95);
+    border: 1px solid rgba(0,0,0,0.15);
+}
+
+.sobre-page .menu a {
+    color:#111;
+}
+
+.sobre-page .hamburger span {
+    background:#111;
+}
+
 footer {
     text-align: center;
     padding: 20px;
