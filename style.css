@@ -1,0 +1,416 @@
+/* RESET BÁSICO (remove estilos padrão do navegador) */
+*{
+    margin:0; /* remove margens */
+    padding:0; /* remove espaçamentos */
+    box-sizing:border-box; /* facilita cálculo de tamanho */
+    font-family:Helvetica, Arial, sans-serif; /* fonte padrão */
+}
+
+.tittle{
+    position: fixed;
+    top:20px;
+    left:25%;
+    font-size:24px;
+    font-weight:bold;
+    color:white;
+}
+
+/* CORPO DA PÁGINA */
+body{
+    background:#000; /* fundo preto */
+    color:#fff; /* texto branco */
+    overflow-x:hidden; /* evita scroll lateral */
+}
+
+/* HERO (seção principal) */
+.hero{
+    height:90vh; /* ocupa a tela inteira */
+    display:flex; /* ativa layout flex */
+    align-items:center; /* centraliza vertical */
+    justify-content:space-between; /* separa texto e imagem */
+    padding:0 8%; /* espaço lateral */
+}
+
+/* BLOCO DE TEXTO */
+.text{
+    max-width:500px; /* limita largura */
+}
+
+/* TÍTULO */
+.text h1{
+    font-size:80px; /* bem grande estilo Nike */
+    font-weight:900; /* bem pesado */
+    line-height:0.9; /* diminui espaço entre linhas */
+}
+
+/* PARÁGRAFO */
+.text p{
+    margin:20px 0; /* espaço em cima e baixo */
+    color:#aaa; /* cinza */
+    font-size:18px;
+}
+
+/* BOTÃO */
+.btn{
+    display:inline-block;
+    padding:12px 30px;
+    border:2px solid white;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s; /* animação suave */
+}
+
+/* FORMULÁRIO DE CONTATO */
+.container{
+    max-width:900px;
+    margin:4rem auto 2rem;
+    padding:2rem;
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.14);
+    border-radius:18px;
+}
+
+.container h1{
+    font-size:3rem;
+    text-align:center;
+    margin-bottom:1.8rem;
+    letter-spacing:1px;
+}
+
+.formulario{
+    display:flex;
+    flex-direction:column;
+    gap:1.2rem;
+    max-width:640px;
+    margin:0 auto;
+}
+
+.formulario input{
+    width:100%;
+    padding:1rem 1.2rem;
+    border:1px solid rgba(255,255,255,0.24);
+    border-radius:12px;
+    background:rgba(255,255,255,0.05);
+    color:#fff;
+    font-size:1rem;
+    transition:0.3s;
+}
+
+.formulario input::placeholder{
+    color:rgba(255,255,255,0.65);
+}
+
+.formulario input:focus{
+    outline:none;
+    border-color:#fff;
+    box-shadow:0 0 0 4px rgba(255,255,255,0.08);
+}
+
+.formulario input:invalid{
+    border-color:#ff6b6b;
+}
+
+.formulario input:valid{
+    border-color:#47d7a0;
+}
+
+.formulario button{
+    width:100%;
+    padding:14px 18px;
+    background:#fff;
+    color:#000;
+    border:none;
+    border-radius:12px;
+    font-weight:800;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.formulario button:hover{
+    filter:brightness(0.95);
+}
+
+/* MAPA DE CONTATO */
+.mapa{
+    width:100%;
+    max-width:900px;
+    margin:2rem auto;
+}
+
+.mapa iframe{
+    width:100%;
+    height:450px;
+    border:0;
+}
+
+/* HOVER DO BOTÃO */
+.btn:hover{
+    background:white;
+    color:black;
+}
+
+/* CONTAINER DAS IMAGENS */
+.images{
+    position:relative; /* necessário para overlay */
+    width:100%;
+    max-width:500px;
+    aspect-ratio:1/1;
+    overflow:hidden;
+    margin:auto;
+}
+
+/* IMAGEM PRINCIPAL */
+.main-img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    filter:grayscale(100%) contrast(120%); /* estilo preto e branco */
+    transition:0.5s;
+}
+
+/* IMAGEM SOBREPOSTA */
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0; /* invisível inicialmente */
+    /* transform:translate(20px, 20px); deslocada */
+    transition:0.5s;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+.images:hover .main-img{
+    opacity:0; /* esconde quando overlay aparece */
+    /* transform:scale(1.05); zoom leve */
+}
+
+.images:hover .overlay{
+    opacity:1; /* aparece completamente */
+    transform:translate(0,0); /* volta ao lugar */
+}
+
+/* LINHA DECORATIVA */
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 1200px) {
+    .hero {
+        padding:0 5%;
+    }
+
+    .text h1 {
+        font-size:64px;
+    }
+
+    .heroprodutos h1 {
+        font-size:48px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        gap:2rem;
+        min-height:80vh;
+        padding:2rem;
+    }
+
+    .hero .text,
+    .images {
+        width:100%;
+        max-width:560px;
+    }
+
+    .text h1 {
+        font-size:48px;
+        text-align:center;
+    }
+
+    .text p {
+        font-size:16px;
+        text-align:center;
+    }
+
+    .text {
+        text-align:center;
+    }
+
+    .text .btn {
+        margin:0 auto;
+        display:inline-block;
+    }
+
+    .images {
+        max-width:90vw;
+        aspect-ratio:1/1;
+    }
+
+    .tittle,
+    .aboutus,
+    .contact {
+        position:static;
+        display:block;
+        margin:8px auto;
+        text-align:center;
+    }
+}
+
+@media (max-width: 600px) {
+    .text h1 {
+        font-size:32px;
+    }
+
+    .btn {
+        width:100%;
+        text-align:center;
+        padding:12px;
+    }
+
+    .heroprodutos {
+        height:30vh;
+        padding-left:20px;
+    }
+
+    .heroprodutos h1 {
+        font-size:32px;
+    }
+
+    .hero {
+        min-height:70vh;
+        padding:1.5rem;
+    }
+}
+
+.line{
+    position:absolute;
+    bottom:50px;
+    left:8%;
+    width:80px;
+    height:4px;
+    background:white;
+}
+
+.aboutus{
+    position: fixed;
+    top:20px;
+    right:10%;
+    font-size:18px;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.contact{
+    position: fixed;
+    top:20px;
+    right:50%;
+    font-size:18px;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+
+
+.footer{
+    text-align:center;
+    padding:20px 0;
+    background:#111;
+    color:whitesmoke;
+    font-size:14px;
+}
+
+----------
+Produtos
+----------
+
+nav a {
+    color: white;           /* deixa branco */
+    text-decoration: none;  /* remove sublinhado */
+    margin-left: 20px;      /* espaçamento */
+}
+
+nav a:hover {
+    color: #aaa; /* efeito ao passar o mouse */
+}
+
+
+/* ================= HERO ================= */
+.heroprodutos {
+    height: 40vh; /* ocupa 80% da tela */
+    background: url('') center/cover;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.heroprodutos h1 {
+    font-size: 60px;
+}
+
+.heroprodutos p {
+    margin: 10px 0;
+}
+
+.heroprodutos button {
+    padding: 10px 20px;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* ================= PRODUTOS ================= */
+.produtos {
+    padding: 40px;
+}
+
+.produtos h2 {
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid; /* layout em grade */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; /* espaço entre cards */
+}
+
+.card {
+    background: #111;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s;
+    height: auto;
+    width: auto;
+}
+
+.card:hover {
+    transform: scale(1.05); /* animação ao passar o mouse */
+}
+
+.card img {
+    width: 100%;        /* ocupa toda largura do card */
+    height: 250px;      /* altura fixa (PADRÃO) */
+    object-fit: cover;  /* corta sem deformar */
+}
+
+.card button {
+    margin-top: 10px;
+    padding: 10px;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #222;
+}
