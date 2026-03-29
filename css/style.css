@@ -139,10 +139,19 @@ body.index-page .images {
     border-radius:10px;
     background:transparent;
     color:white;
+    font-family:inherit;
+    font-size:1rem;
+    line-height:1;
     text-decoration:none;
+    text-align:center;
     font-weight:bold;
     cursor:pointer;
     transition:0.3s; /* animação suave */
+}
+
+button.btn{
+    background:transparent;
+    border:2px solid white;
 }
 
 /* FORMULÁRIO DE CONTATO */
