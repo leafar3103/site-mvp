@@ -71,6 +71,7 @@ body{
     right:20px;
     z-index:20;
     display:flex;
+    justify-content:flex-end;
     align-items:center;
     gap:1rem;
 }
@@ -117,6 +118,22 @@ body.index-page .contact {
 
 body.index-page {
     overflow-y: hidden;
+}
+
+body:not(.index-page) .site-header {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    width:100%;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 0;
+    padding: 10px 4%;
+    z-index:20;
+}
+
+.sobre-page .site-header {
+    background: #fff;
 }
 
 .menu-toggle:checked + .hamburger span:nth-child(1){
@@ -602,13 +619,18 @@ nav a:hover {
 
 /* ================= FOOTER ================= */
 
-.sobre-page .menu {
+.sobre-page .site-header {
     background: rgba(255,255,255,0.95);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.sobre-page .menu {
+    background: #111(255,255,255,0.95);
     border: 1px solid rgba(0,0,0,0.15);
 }
 
 .sobre-page .menu a {
-    color:#111;
+    color:#fff;
 }
 
 .sobre-page .hamburger span {
