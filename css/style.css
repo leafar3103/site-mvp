@@ -649,6 +649,33 @@ footer {
     z-index:15;
 }
 
+#texto-digitado {
+  /* Removemos o nowrap para permitir que o texto quebre linha se for grande */
+  /* Removemos o display: inline-block para ele se comportar como um bloco normal */
+  
+  border-right: 3px solid #000; /* O cursor */
+  padding-right: 5px;
+  
+  /* Largura máxima para não estourar a tela (ajuste conforme seu design) */
+  max-width: 100%; 
+  
+  /* Garante que o cursor pisque */
+  animation: piscar 0.7s step-end infinite;
+  
+  /* Opcional: Alinhamento para garantir que o cursor não suma */
+  display: inline; 
+}
+
+@keyframes piscar {
+  from, to { border-color: transparent; }
+  50% { border-color: #fff; }
+}
+
+/* Classe opcional para remover o cursor quando terminar */
+.cursor-parado {
+  border-right: none !important;
+}
+
 @media (max-width: 900px) {
     .footer,
     footer {
