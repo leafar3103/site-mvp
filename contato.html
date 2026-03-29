@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário Nike Style</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+     <header>
+        
+    
+       
+        <nav>
+            <a class="aboutus" href="index.html">Home</a>
+            
+        </nav>
+    </header>
+
+    
+    <section class="container">
+
+        <h1>FALE CONOSCO</h1>
+
+        <form class="formulario">
+
+            <input type="text" placeholder="Seu nome completo" required pattern="[A-Za-zÀ-ÿ ]{3,}" title="Digite pelo menos 3 letras" />
+            <input type="tel" placeholder="Telefone (somente números)" required pattern="\d{10,11}" title="Digite 10 ou 11 dígitos sem espaços" />
+            <input type="email" placeholder="E-mail" required title="Digite um e-mail válido" />
+
+            <button type="submit">ENVIAR</button>
+
+        </form>
+
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps?q=Nike+Factory+Osasco&center=-23.5380556,-46.7677778&zoom=17&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    </section>
+
+</body>
+</html>
