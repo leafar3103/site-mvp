@@ -40,7 +40,13 @@ body{
 }
 
 .site-header{
-    display:none;
+    position:fixed;
+    top:20px;
+    right:20px;
+    z-index:20;
+    display:flex;
+    align-items:center;
+    gap:1rem;
 }
 
 .menu-toggle{
@@ -48,7 +54,7 @@ body{
 }
 
 .hamburger{
-    display:flex;
+    display:none;
     flex-direction:column;
     justify-content:space-between;
     width:28px;
@@ -66,23 +72,25 @@ body{
 }
 
 .menu{
-    position:absolute;
-    top:60px;
-    right:0;
-    display:none;
-    flex-direction:column;
-    gap:0.75rem;
-    padding:1rem 1.2rem;
-    background:rgba(0,0,0,0.9);
-    border:1px solid rgba(255,255,255,0.15);
-    border-radius:16px;
-    min-width:170px;
+    display:flex;
+    flex-direction:row;
+    gap:1rem;
+    align-items:center;
 }
 
 .menu a{
     color:#fff;
     text-decoration:none;
     font-weight:700;
+}
+
+body.index-page .aboutus,
+body.index-page .contact {
+    display:none !important;
+}
+
+body.index-page .images {
+    display:none !important;
 }
 
 .menu-toggle:checked + .hamburger span:nth-child(1){
@@ -333,10 +341,35 @@ body{
 
     .menu-toggle{
         display:block;
+        width:24px;
+        height:24px;
+        opacity:0;
+        position:absolute;
+        top:-10px;
+        right:-10px;
+        cursor:pointer;
+    }
+
+    .hamburger{
+        display:flex;
     }
 
     .menu{
-        right:20px;
+        position:absolute;
+        top:60px;
+        right:0;
+        display:none;
+        flex-direction:column;
+        gap:0.75rem;
+        padding:1rem 1.2rem;
+        background:rgba(0,0,0,0.9);
+        border:1px solid rgba(255,255,255,0.15);
+        border-radius:16px;
+        min-width:170px;
+    }
+
+    .menu-toggle:checked ~ .menu{
+        display:flex;
     }
 
     .index-page .aboutus,
