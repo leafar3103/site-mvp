@@ -26,9 +26,17 @@ body{
 .hero{
     height:90vh; /* ocupa a tela inteira */
     display:flex; /* ativa layout flex */
+    flex-wrap:wrap;
     align-items:center; /* centraliza vertical */
     justify-content:space-between; /* separa texto e imagem */
     padding:0 8%; /* espaço lateral */
+}
+
+.title img{
+    width:100%;
+    max-width:220px;
+    height:auto;
+    display:block;
 }
 
 /* BLOCO DE TEXTO */
