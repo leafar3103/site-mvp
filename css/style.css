@@ -131,12 +131,17 @@ body.index-page .images {
 
 /* BOTÃO */
 .btn{
-    display:inline-block;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
     padding:12px 30px;
     border:2px solid white;
-    text-decoration:none;
+    border-radius:10px;
+    background:transparent;
     color:white;
+    text-decoration:none;
     font-weight:bold;
+    cursor:pointer;
     transition:0.3s; /* animação suave */
 }
 
